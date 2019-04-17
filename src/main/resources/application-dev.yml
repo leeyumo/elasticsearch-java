@@ -1,0 +1,13 @@
+server:
+  port: 8012
+
+elasticsearch:
+  host: localhost
+  port: 9200
+  cluster:
+    name: my-application
+
+
+
+
+
