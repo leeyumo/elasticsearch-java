@@ -19,11 +19,6 @@ public class TestController {
     @Autowired
     private RestHighLevelClient restHighLevelClient;
 
-    @GetMapping("testConnection")
-    public String testConnection(){
-        return "已经成功连接";
-    }
-
     @GetMapping("getDocById")
     public Object getDocById(@RequestParam String docId) throws IOException {
         GetRequest getRequest = new GetRequest("book","12");
