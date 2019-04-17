@@ -1,4 +1,4 @@
-package com.leeyumo.elasticJava.config;
+package com.leeyumo.elasticsearchJava.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.leeyumo.elasticJava"))
+                .apis(RequestHandlerSelectors.basePackage("com.leeyumo.elasticsearchJava"))
                 .paths(PathSelectors.any())
                 .build();
     }

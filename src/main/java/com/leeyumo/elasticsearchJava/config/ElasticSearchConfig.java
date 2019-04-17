@@ -1,4 +1,4 @@
-package com.leeyumo.elasticJava.config;
+package com.leeyumo.elasticsearchJava.config;
 
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;

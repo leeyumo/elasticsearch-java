@@ -1,4 +1,4 @@
-package com.leeyumo.elasticJava.web.endpoints;
+package com.leeyumo.elasticsearchJava.web.endpoints;
 
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
