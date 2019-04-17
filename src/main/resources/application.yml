@@ -1,5 +1,5 @@
 spring:
   application:
-    name: elastic-java
+    name: elasticsearch-java
   profiles:
     active: dev

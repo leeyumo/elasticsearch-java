@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.leeyumo</groupId>
-    <artifactId>elastic-java</artifactId>
+    <artifactId>elasticsearch-java</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <skipTests>true</skipTests>
