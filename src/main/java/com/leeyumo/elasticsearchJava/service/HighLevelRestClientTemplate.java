@@ -6,4 +6,6 @@ import java.io.IOException;
 
 public interface HighLevelRestClientTemplate {
     boolean createByIndexAndId(IndexName indexName, String id, Object source) throws IOException;
+
+    Object getSource(IndexName indexName) throws IOException;
 }

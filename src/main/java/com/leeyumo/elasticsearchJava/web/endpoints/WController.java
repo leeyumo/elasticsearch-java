@@ -10,8 +10,8 @@ import java.io.IOException;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("test")
-public class TestController {
+@RequestMapping("w")
+public class WController {
     @Autowired
     private HighLevelRestClientTemplate highLevelRestClientTemplate;
 
