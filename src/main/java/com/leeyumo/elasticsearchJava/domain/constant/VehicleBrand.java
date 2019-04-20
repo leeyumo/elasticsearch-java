@@ -11,15 +11,15 @@ public enum VehicleBrand implements StringPropertyEnum{
     BMW("宝马"),
     Audi("奥迪");
 
-    private String name;
+    private String value;
 
-    VehicleBrand(String name){
-        this.name=name;
+    VehicleBrand(String value){
+        this.value=value;
     }
 
 
     @Override
-    public String stringValue() {
-        return this.name;
+    public String getValue() {
+        return this.value;
     }
 }

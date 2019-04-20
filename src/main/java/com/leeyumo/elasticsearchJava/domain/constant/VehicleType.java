@@ -5,14 +5,14 @@ public enum VehicleType implements StringPropertyEnum{
     SUV("SUV"),
     ROADSTER("跑车");
 
-    private String name;
+    private String value;
 
-    VehicleType(String name){
-        this.name=name;
+    VehicleType(String value){
+        this.value=value;
     }
 
     @Override
-    public String stringValue() {
-        return this.name;
+    public String getValue() {
+        return this.value;
     }
 }

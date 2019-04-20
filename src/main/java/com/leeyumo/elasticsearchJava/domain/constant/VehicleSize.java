@@ -6,14 +6,14 @@ public enum VehicleSize implements StringPropertyEnum{
     C("C"),
     D("D");
 
-    private String name;
+    private String value;
 
-    VehicleSize(String name){
-        this.name=name;
+    VehicleSize(String value){
+        this.value=value;
     }
 
     @Override
-    public String stringValue() {
-        return this.name;
+    public String getValue() {
+        return this.value;
     }
 }

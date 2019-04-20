@@ -1,7 +1,6 @@
 package com.leeyumo.elasticsearchJava.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.leeyumo.elasticsearchJava.domain.constant.VehicleBrand;
 import com.leeyumo.elasticsearchJava.domain.indexName.IndexName;
 import com.leeyumo.elasticsearchJava.service.HighLevelRestClientTemplate;
 import org.elasticsearch.action.DocWriteResponse;
@@ -12,7 +11,6 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
-import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -34,7 +32,7 @@ public class HighLevelRestClientTemplateImpl implements HighLevelRestClientTempl
      */
     @Override
     public boolean createByIndexAndId(IndexName indexName, String id, Object source) throws IOException {
-        IndexRequest request = new IndexRequest(indexName.stringValue());
+        IndexRequest request = new IndexRequest(indexName.getValue());
         request.id(id);
         request.source(JSON.toJSONString(source), XContentType.JSON);
         IndexResponse indexResponse = restHighLevelClient.index(request, RequestOptions.DEFAULT);
@@ -47,10 +45,10 @@ public class HighLevelRestClientTemplateImpl implements HighLevelRestClientTempl
     }
 
     @Override
-    public Object getSource(IndexName indexName) throws IOException {
-        SearchRequest searchRequest = new SearchRequest(indexName.stringValue());
-        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-        searchSourceBuilder.query(QueryBuilders.matchQuery("brand", VehicleBrand.DasAuto.name()));
+    public Object getSource(IndexName indexName, SearchSourceBuilder searchSourceBuilder) throws IOException {
+        SearchRequest searchRequest = new SearchRequest(indexName.getValue());
+//        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+//        searchSourceBuilder.query(QueryBuilders.matchQuery("brand", VehicleBrand.DasAuto.name()));
 //        searchSourceBuilder.from(0);
 //        searchSourceBuilder.size(2);
 //        searchSourceBuilder.timeout(new TimeValue(60, TimeUnit.SECONDS));

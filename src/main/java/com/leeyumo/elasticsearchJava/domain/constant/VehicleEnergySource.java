@@ -5,14 +5,14 @@ public enum VehicleEnergySource implements StringPropertyEnum{
     ELECTRIC("电车"),
     HYBRID("混动车");
 
-    private String name;
+    private String value;
 
-    VehicleEnergySource(String name){
-        this.name=name;
+    VehicleEnergySource(String value){
+        this.value=value;
     }
 
     @Override
-    public String stringValue() {
-        return this.name;
+    public String getValue() {
+        return this.value;
     }
 }

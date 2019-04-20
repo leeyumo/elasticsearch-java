@@ -13,7 +13,7 @@ public enum IndexName implements StringPropertyEnum {
     }
 
     @Override
-    public String stringValue() {
+    public String getValue() {
         return this.name;
     }
 }
